@@ -3,5 +3,30 @@
 version = 3
 
 [[package]]
+name = "lazy_static"
+version = "1.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e2abad23fbc42b3700f2f279844dc832adb2b2eb069b2df918f455c4e18cc646"
+
+[[package]]
 name = "nintendo64-hal"
 version = "0.0.0"
+dependencies = [
+ "nintendo64-pac",
+]
+
+[[package]]
+name = "nintendo64-pac"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a04b7aab25b64e5b3d95e52c8ef1bbf7469a0a311ff52f7faa5550ab5f2e8169"
+dependencies = [
+ "lazy_static",
+ "tock-registers",
+]
+
+[[package]]
+name = "tock-registers"
+version = "0.8.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "696941a0aee7e276a165a978b37918fd5d22c55c3d6bda197813070ca9c0f21c"
